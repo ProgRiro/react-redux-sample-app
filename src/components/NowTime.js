@@ -31,9 +31,9 @@ class NowTime extends Component {
     };
 
     return (
-        <div style={flexBox}>
-          <h2>now time: {this.state.date.toLocaleTimeString()}</h2>
-        </div>
+      <div style={flexBox}>
+        <h2>now time: {this.state.date.toLocaleTimeString()}</h2>
+      </div>
     );
   }
 }
