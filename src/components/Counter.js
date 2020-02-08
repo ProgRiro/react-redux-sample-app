@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { countup, countdown } from "../actions";
 
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+
 class Counter extends Component {
   render() {
     const props = this.props;
@@ -11,26 +15,20 @@ class Counter extends Component {
       textAlign: "center"
     };
 
-    const flexBox = {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "50%",
-      margin: "0 auto"
-    };
-
     return (
-      <React.Fragment>
-        <h1 style={textCenter}>CountApp</h1>
-        <div style={flexBox}>
+      <Box textAlign="center">
+        <h1>CountApp</h1>
+        <Box>
           <h2>{props.value}</h2>
-          <div>
-            <button onClick={props.countup}>+1</button>
-            <button onClick={props.countdown}>-1</button>
-          </div>
-        </div>
-      </React.Fragment>
+          <ButtonGroup
+            color="primary"
+            aria-label="outlined primary button group"
+          >
+            <Button onClick={props.countup}>+1</Button>
+            <Button onClick={props.countdown}>-1</Button>
+          </ButtonGroup>
+        </Box>
+      </Box>
     );
   }
 }
