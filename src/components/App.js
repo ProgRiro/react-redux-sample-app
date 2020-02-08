@@ -25,14 +25,6 @@ class App extends Component {
   };
 
   render() {
-    const flexBox = {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "50%",
-      margin: "0 auto"
-    };
 
     return (
       <React.Fragment>
