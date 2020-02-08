@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Counter from "./Counter";
 import NowTime from "./NowTime";
 
+import GlobalStyle from "../material-ui/globalStyle";
+import { theme } from "../material-ui/theme";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,10 +30,11 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <MuiThemeProvider theme={theme}>
+        <GlobalStyle />
         <Counter />
         <NowTime />
-      </React.Fragment>
+      </MuiThemeProvider>
     );
   }
 }

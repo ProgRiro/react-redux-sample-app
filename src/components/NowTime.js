@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Box from "@material-ui/core/Box";
+
 class NowTime extends Component {
   constructor(props) {
     super(props);
@@ -21,19 +23,11 @@ class NowTime extends Component {
   };
 
   render() {
-    const flexBox = {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "50%",
-      margin: "0 auto"
-    };
 
     return (
-      <div style={flexBox}>
+      <Box textAlign="center">
         <h2>now time: {this.state.date.toLocaleTimeString()}</h2>
-      </div>
+      </Box>
     );
   }
 }
