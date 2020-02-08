@@ -11,10 +11,6 @@ class Counter extends Component {
   render() {
     const props = this.props;
 
-    const textCenter = {
-      textAlign: "center"
-    };
-
     return (
       <Box textAlign="center">
         <h1>CountApp</h1>
@@ -24,8 +20,8 @@ class Counter extends Component {
             color="primary"
             aria-label="outlined primary button group"
           >
-            <Button onClick={props.countup}>+1</Button>
-            <Button onClick={props.countdown}>-1</Button>
+            <Button onClick={props.countup}>＋ 1</Button>
+            <Button onClick={props.countdown}>ー 1</Button>
           </ButtonGroup>
         </Box>
       </Box>
