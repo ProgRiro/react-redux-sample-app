@@ -1,29 +1,14 @@
 import React, { Component } from "react";
 
-class App extends Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
       count: 0,
-      date: new Date()
     };
     this.countUp = this.countUp.bind(this);
     this.countDown = this.countDown.bind(this);
   }
-
-  componentDidMount = () => {
-    this.timerId = setInterval(() => this.tick(), 1000);
-  };
-
-  componentWillUnmount = () => {
-    clearInterval(this.timerId);
-  };
-
-  tick = () => {
-    this.setState({
-      date: new Date()
-    });
-  };
 
   countUp = () => {
     this.setState({ count: this.state.count + 1 });
@@ -57,12 +42,9 @@ class App extends Component {
             <button onClick={this.countDown}>-1</button>
           </div>
         </div>
-        <div style={flexBox}>
-          <h2>now time: {this.state.date.toLocaleTimeString()}</h2>
-        </div>
       </React.Fragment>
     );
   }
 }
 
-export default App;
+export default Counter;
